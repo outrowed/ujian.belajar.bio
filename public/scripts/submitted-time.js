@@ -1,6 +1,6 @@
 
 const urlParams = new URLSearchParams(window.location.search);
-const overload = urlParams.get("submitted-time-overload") == "true";
+const overload = urlParams.get("submitted-overload") == "true";
 
 if (overload) localStorage.setItem("last-submitted-time", null);
 
