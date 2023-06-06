@@ -1,8 +1,6 @@
 body {
     all: unset;
     display: grid;
-    height: 100vh;
-    width: 100vw;
     grid-template-rows: 1fr 20fr 4.5fr;
     color: black;
     font-size: min(calc(0.7rem + 1vw), 1rem);

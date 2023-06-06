@@ -2,7 +2,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const overload = urlParams.get("submitted-overload") == "true";
 
-if (overload) localStorage.setItem("last-submitted-time", null);
+if (overload) localStorage.removeItem("last-submitted-time");
 
 if (localStorage.getItem("last-submitted-time") == null) {
     localStorage.setItem("last-submitted-time", Date.now());
