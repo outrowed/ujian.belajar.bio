@@ -19,7 +19,7 @@ jobs:
         if: success()
         uses: crazy-max/ghaction-github-pages@v3
         with:
-            fqdn: belajar.bio
+            fqdn: ujian.smadewisartika.sch.id.belajar.bio
             target_branch: gh-pages
             build_dir: public
         env:
