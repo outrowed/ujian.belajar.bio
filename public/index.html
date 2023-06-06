@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./styles/main.css">
+    <script src="./scripts/query-parser.js" async></script>
 </head>
 <body>
     <header>
@@ -16,7 +17,7 @@
             <div id="dewi-sartika-homepage">
                 <img src="./assets/sma_dewi_sartika_logo.png" width="40">
             </div>
-            <div class="toolbar" hidden="true">
+            <div class="toolbar" hidden>
                 <div>NOTIFICATION</div>
                 <div>PROFILE</div>
                 <div>DROPDOWN</div>
@@ -25,26 +26,26 @@
     </header>
     <main>
         <header>
-            <h1>H1J3 Agama Islam Kelas 10 (AAT 2022-2023)</h1>
+            <h1 urlq="mapel">H1J3 Agama Islam Kelas 10 (AAT 2022-2023)</h1>
             <div class="path">
-                Dashboard / My courses / H1J3 Agama Islam Kelas 10 (AAT 2022-2023)
+                Dashboard / My courses / <span urlq="mapel">H1J3 Agama Islam Kelas 10 (AAT 2022-2023)</span>
             </div>
         </header>
         <article>
-            <h2>H1J3 Agama Islam Kelas 10 (AAT 2022-2023)</h2>
+            <h2 urlq="mapel">H1J3 Agama Islam Kelas 10 (AAT 2022-2023)</h2>
             <div id="opened-closed">
-                <b>Opened:</b> Monday, 5 June 2023, 11:30 AM
+                <b>Opened:</b> <span urlq="btime">Monday, 5 June 2023, 11:30 AM</span>
                 <br>
-                <b>Closed:</b> Monday, 5 June 2023, 1:30 PM
+                <b>Closed:</b> <span urlq="etime">Monday, 5 June 2023, 1:30 PM</span>
                 <br>
                 <div id="done-attempts">
-                    <b>Done:</b> Make attempts: 1
+                    <b>Done:</b> Make attempts: <span urlq="mattempts">1</span>
                 </div>
             </div>
             <div class="announce">
-                Attempts allowed: 1
+                Attempts allowed: <span urlq="mattempts">1</span>
                 <br>
-                Time limit: 1 hour 30 mins
+                Time limit: <span urlq="timelimit">1 hour 30 mins</span>
             </div>
             <h2>Summary of your previous attempts</h2>
             <div id="summary-attempts">
@@ -52,7 +53,7 @@
                 <div>Review</div>
                 <div>
                     Finished<br>
-                    <span class="submitted">Submitted Monday, 5 June 2023, 12:17 PM</span>
+                    <span class="submitted">Submitted <span urlq="stime">Monday, 5 June 2023, 12:17 PM</span></span>
                 </div>
                 <div class="not-permitted">
                     Not permitted
@@ -64,11 +65,11 @@
         </article>
     </main>
     <footer>
-        You are logged in as X-4-28 Taruna Prasetya (Log out)
+        You are logged in as <span urlq="accname">X-4-28 Taruna Prasetya</span> (Log out)
         <br>
         Reset user tour on this page
         <br>
-        H1J3 Agama Islam Kelas 10 (AAT 2022-2023)
+        <span urlq="mapel">H1J3 Agama Islam Kelas 10 (AAT 2022-2023)</span>
         <br>
         <br>
         <div>English (en)</div>
