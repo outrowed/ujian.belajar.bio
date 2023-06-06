@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            all: unset;
+            display: grid;
+            height: 100vh;
+            width: 100vw;
+            grid-template-rows: 1fr 20fr 4.5fr;
+            color: black;
+            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        }
+        *[hidden] {
+            display: none !important;
+        }
+        button {
+            all: unset;
+        }
+        body > header {
+            padding: .5rem 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,.08);
+        }
+        body > footer {
+            padding: 14px 50px;
+            background-color: #343a40;
+            color: white;
+            height: 100%;
+        }
+        .spaced {
+            margin-left: 14px;
+        }
+        
+        nav {
+            display: inline-grid;
+            grid-template-columns: 1fr 1fr 20fr 1fr;
+        }
+        nav > :not(:first-child) {
+            margin-left: 12px;
+        }
+        #burger {
+            background-color: #e9ecef;
+            text-align: center;
+            width: fit-content;
+            padding: 8px 19px;
+            margin-left: 6px;
+        }
+        #burger > object {
+            width: 18px;
+        }
+        nav > .toolbar {
+            display: flex;
+            gap: 4px;
+            grid-column: 4;
+        }
+        main {
+            padding: 20px 16px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            all: unset;
+            display: block;
+            font-weight: 300;
+            line-height: 1.2;
+        }
+        h1 {
+            font-size: min(calc(1.044375rem + 1.7325vw), 2.2rem);
+        }
+        h2 {
+            font-size: min(calc(0.9975rem + 1.17vw), 1.7rem);
+            margin-bottom: 10px;
+        }
+        main > :not(:first-child) {
+            margin-top: 24px;
+        }
+        main > header > :not(:first-child) {
+            margin-top: 14px;
+        }
+        main > header .path {
+            border: 2px solid #e9ecef;
+            padding: 9px 4px;
+        }
+        main > article {
+            border: 1px solid rgba(0,0,0,.125);
+            padding: 20px;
+        }
+        #opened-closed {
+            border-bottom: 1px solid #dee2e6;
+            padding-bottom: 12px;
+        }
+        #done-attempts {
+            display: inline;
+            width: fit-content;
+            line-height: 2;
+            padding: 0.6px 5px;
+            background-color: #357a32;
+            color: white;
+            border-radius: 5px;
+        }
+        article > .announce {
+            margin: 30px 0;
+            text-align: center;
+            line-height: 2.5;
+        }
+        #summary-attempts {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            border-top: 1px solid #dee2e6;
+        }
+        #summary-attempts > * {
+            padding: 14px 10px;
+        }
+        #summary-attempts > :where(:nth-child(1), :nth-child(2)) {
+            font-weight: bold;
+            border-bottom: 2px solid #dee2e6;
+        }
+        #summary-attempts > :where(:nth-child(3), :nth-child(4)) {
+            background-color: rgba(0,0,0,.03);
+        }
+        #summary-attempts > .not-permitted {
+            color: gray;
+        }
+        #summary-attempts .submitted {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <button id="burger">
+                <object type="image/svg+xml" data="./assets/burger.svg"></object>
+            </button>
+            <div id="dewi-sartika-homepage">
+                <img src="./assets/sma_dewi_sartika_logo.png" width="40">
+            </div>
+            <div class="toolbar" hidden="true">
+                <div>NOTIFICATION</div>
+                <div>PROFILE</div>
+                <div>DROPDOWN</div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <header>
+            <h1>H1J3 Agama Islam Kelas 10 (AAT 2022-2023)</h1>
+            <div class="path">
+                Dashboard / My courses / H1J3 Agama Islam Kelas 10 (AAT 2022-2023)
+            </div>
+        </header>
+        <article>
+            <h2>H1J3 Agama Islam Kelas 10 (AAT 2022-2023)</h2>
+            <div id="opened-closed">
+                <b>Opened:</b> Monday, 5 June 2023, 11:30 AM
+                <br>
+                <b>Closed:</b> Monday, 5 June 2023, 1:30 PM
+                <br>
+                <div id="done-attempts">
+                    <b>Done:</b> Make attempts: 1
+                </div>
+            </div>
+            <div class="announce">
+                Attempts allowed: 1
+                <br>
+                Time limit: 1 hour 30 mins
+            </div>
+            <h2>Summary of your previous attempts</h2>
+            <div id="summary-attempts">
+                <div>State</div>
+                <div>Review</div>
+                <div>
+                    Finished<br>
+                    <span class="submitted">Submitted Monday, 5 June 2023, 12:17 PM</span>
+                </div>
+                <div class="not-permitted">
+                    Not permitted
+                </div>
+            </div>
+            <div class="announce">
+                No more attempts are allowed
+            </div>
+        </article>
+    </main>
+    <footer>
+        You are logged in as X-4-28 Taruna Prasetya (Log out)
+        <br>
+        Reset user tour on this page
+        <br>
+        H1J3 Agama Islam Kelas 10 (AAT 2022-2023)
+        <br>
+        <br>
+        <div>English (en)</div>
+        <div class="spaced">Bahasa Indonesia (id)</div>    
+        <div class="spaced">English (en)</div>
+        <br>
+        Data retention summary
+        <br>
+        Get the mobile app
+    </footer>
+</body>
+</html>
