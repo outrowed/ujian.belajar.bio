@@ -11,6 +11,11 @@ body {
 *[hidden] {
     display: none !important;
 }
+a {
+    all: unset;
+    text-decoration: underline;
+    cursor: pointer;
+}
 button {
     all: unset;
 }
@@ -74,7 +79,15 @@ main > header > :not(:first-child) {
 }
 main > header .path {
     border: 2px solid #e9ecef;
-    padding: 9px 4px;
+    padding: 10px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+main > header .path > :not(.sep) {
+    color: slateblue;
+    cursor: pointer;
+    text-decoration: underline;
 }
 main > article {
     border: 1px solid rgba(0,0,0,.125);
