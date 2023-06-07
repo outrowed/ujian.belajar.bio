@@ -80,20 +80,19 @@ footer {
     background-color: #f2f2f2;
     width: 7cm;
     height: 100vh;
-    padding: 20px;
 }
 #home-button {
     display: block;
-    width: calc(100% - 40px);
-    background-color: #f8f9fa;
-    color: #495057;
+    background-color: #0f6fc5;
+    color: white;
     padding: .75rem 1.25rem;
-    border: 1px solid rgba(0,0,0,.125);
     text-decoration: none;
+    font-weight: bold;
 }
 #home-icon {
     width: 0.8rem;
     margin-right: 5px;
+    filter: invert();
 }
 main {
     padding: 20px 16px;

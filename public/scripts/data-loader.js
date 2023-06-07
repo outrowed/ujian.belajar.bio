@@ -19,10 +19,6 @@ const user_data = loadUserData() ?? {
     is_null: true
 };
 
-if (user_data.is_null == null) {
-    alert(`Please configure your profile at https://${window.location.hostname}/settings`);
-}
-
 const convertToDateKeys = ["date", "opened_time", "closed_time", "submitted_time"];
 const dataUKeyElements = document.querySelectorAll("[data-ukey]");
 
