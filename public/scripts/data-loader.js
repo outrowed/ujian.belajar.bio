@@ -1,6 +1,11 @@
 
+if (localStorage.getItem("user-data") == null) {
+    alert(`Please configure your profile at https://${window.location.hostname}/settings`)
+}
+
 const user_data = JSON.parse(localStorage.getItem("user-data")) ?? {
     name: "John Doe",
+    name_full: "X-5 John Doe",
     email: "john-doe@example.com",
     date: new Date().toISOString(),
     mapel: "Biologi",

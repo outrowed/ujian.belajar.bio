@@ -1,11 +1,4 @@
-body {
-    all: unset;
-    display: grid;
-    grid-template-rows: 1fr 20fr 4.5fr;
-    color: black;
-    font-size: min(calc(0.7rem + 1vw), 1rem);
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-}
+
 *[hidden] {
     display: none !important;
 }
@@ -13,48 +6,6 @@ a {
     all: unset;
     text-decoration: underline;
     cursor: pointer;
-}
-button {
-    all: unset;
-}
-body > header {
-    padding: .5rem 1rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,.08);
-}
-body > footer {
-    padding: 14px 20px;
-    background-color: #343a40;
-    color: white;
-    height: 100%;
-}
-.spaced {
-    margin-left: 14px;
-}
-
-nav {
-    display: inline-grid;
-    grid-template-columns: 1fr 1fr 20fr 1fr;
-}
-nav > :not(:first-child) {
-    margin-left: 12px;
-}
-#burger {
-    background-color: #e9ecef;
-    text-align: center;
-    width: fit-content;
-    padding: 8px 19px;
-    margin-left: 6px;
-}
-#burger > object {
-    width: 18px;
-}
-nav > .toolbar {
-    display: flex;
-    gap: 4px;
-    grid-column: 4;
-}
-main {
-    padding: 20px 16px;
 }
 h1, h2, h3, h4, h5, h6 {
     all: unset;
@@ -68,6 +19,77 @@ h1 {
 h2 {
     font-size: min(calc(1rem + 1.17vw), 1.7rem);
     margin-bottom: 10px;
+}
+button {
+    all: unset;
+    cursor: pointer;
+}
+.spaced {
+    margin-left: 14px;
+}
+
+body {
+    all: unset;
+    color: black;
+    font-size: min(calc(0.7rem + 1vw), 1rem);
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+footer {
+    padding: 14px 20px;
+    background-color: #343a40;
+    color: white;
+}
+#navigator {
+    position: fixed;
+    display: grid;
+    width: 100vw;
+}
+#navbar {
+    display: inline-grid;
+    padding: .5rem 1rem;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,.08);
+    z-index: 100;
+}
+#navbar > :not(:first-child) {
+    margin-left: 12px;
+}
+#navbar > .toolbar {
+    display: flex;
+    gap: 4px;
+    grid-column: 4;
+}
+#burger {
+    background-color: #e9ecef;
+    text-align: center;
+    vertical-align: middle;
+    width: fit-content;
+    padding: 8px 19px;
+    margin-left: 6px;
+    cursor: pointer;
+}
+#drawer {
+    background-color: #f2f2f2;
+    width: 7cm;
+    height: 100vh;
+    padding: 20px;
+}
+#home-button {
+    display: block;
+    width: calc(100% - 40px);
+    background-color: #f8f9fa;
+    color: #495057;
+    padding: .75rem 1.25rem;
+    border: 1px solid rgba(0,0,0,.125);
+    text-decoration: none;
+}
+#home-icon {
+    width: 0.8rem;
+    margin-right: 5px;
+}
+main {
+    margin-top: 60px;
+    padding: 20px 16px;
 }
 main > :not(:first-child) {
     margin-top: 24px;

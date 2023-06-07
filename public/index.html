@@ -7,13 +7,13 @@
     <title data-ukey="mapel_full"></title>
     <link rel="stylesheet" href="./styles/main.css">
     <script type="module" src="./scripts/data-loader.js" async></script>
-    <script type="module" src="./scripts/submitted-time.js" async></script>
+    <script type="module" src="./scripts/drawer.js" async></script>
 </head>
 <body>
-    <header>
-        <nav>
+    <div id="navigator">
+        <div id="navbar">
             <button id="burger">
-                <object type="image/svg+xml" data="./assets/burger.svg"></object>
+                <img width="18" src="./assets/burger.svg" alt="Burger icon">
             </button>
             <div id="dewi-sartika-homepage" hidden>
                 <img src="./assets/sma_dewi_sartika_logo.png" width="40">
@@ -23,23 +23,29 @@
                 <div>PROFILE</div>
                 <div>DROPDOWN</div>
             </div>
-        </nav>
-    </header>
+        </div>
+        <div id="drawer" hidden>
+            <a id="home-button" href="http://ujian.smadewisartika.sch.id/">
+                <img id="home-icon" src="./assets/home.svg" alt="">
+                Home
+            </a>
+        </div>
+    </div>
     <main>
         <header>
             <h1 data-ukey="mapel_full">H1J3 Agama Islam Kelas 10 (AAT 2022-2023)</h1>
             <div class="path">
-                <div>
+                <a href="http://ujian.smadewisartika.sch.id/">
                     Dashboard
-                </div>
+                </a>
                 <div class="sep">/</div>
-                <div>
+                <a href="http://ujian.smadewisartika.sch.id/">
                     My courses
-                </div>
+                </a>
                 <div class="sep">/</div>
-                <div>
+                <a href="http://ujian.smadewisartika.sch.id/">
                     <span data-ukey="mapel_full">H1J3 Agama Islam Kelas 10 (AAT 2022-2023)</span>
-                </div>
+                </a>
             </div>
         </header>
         <article>
