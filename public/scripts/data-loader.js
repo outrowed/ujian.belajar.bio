@@ -1,6 +1,5 @@
 
-
-import { loadUserData } from "./user-data";
+import { loadUserData } from "./user-data.js";
 
 const user_data = loadUserData() ?? {
     name: "John Doe",
