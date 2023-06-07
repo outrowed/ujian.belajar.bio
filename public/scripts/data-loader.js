@@ -1,9 +1,8 @@
 
-if (localStorage.getItem("user-data") == null) {
-    alert(`Please configure your profile at https://${window.location.hostname}/settings`)
-}
 
-const user_data = JSON.parse(localStorage.getItem("user-data")) ?? {
+import { loadUserData } from "./user-data";
+
+const user_data = loadUserData() ?? {
     name: "John Doe",
     name_full: "X-5 John Doe",
     email: "john-doe@example.com",
@@ -16,7 +15,12 @@ const user_data = JSON.parse(localStorage.getItem("user-data")) ?? {
     opened_time: "7:00",
     closed_time: "8:30",
     submitted_time: "7:30",
+    is_null: true
 };
+
+if (user_data.is_null == null) {
+    alert(`Please configure your profile at https://${window.location.hostname}/settings`);
+}
 
 function convertTimeToDate(time) {
     if (!time.includes(":")) return new Date(time);
