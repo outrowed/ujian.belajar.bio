@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Generator</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <script type="module" src="./scripts/main.js" async></script>
+</head>
+<body>
+    <div id="main">
+        <div class="header">
+            <h2>User Settings for belajar.bio</h2>
+        </div>
+        <form name="settings">
+            <p>
+                Nama Siswa:
+                <input type="text" data-ukey="name" required>
+            </p>
+            <p>
+                Absen Siswa:
+                <input type="number" data-ukey="absen" placeholder="10" required>
+            </p>
+            <p>
+                Kelas Siswa:
+                <input type="text" data-ukey="class" placeholder="X-4" pattern="X-[1-7]" required>
+            </p>
+            <p>
+                Email Siswa:
+                <input type="email" data-ukey="email" required placeholder="john-doe@gmail.com">
+            </p>
+            <p>
+                Tanggal Ujian:
+                <input type="datetime-local" data-ukey="date" required>
+            </p>
+            <p>
+                Mata Pelajaran:
+                <input type="text" data-ukey="mapel" required>
+            </p>
+            <p>
+                Max Attempts:
+                <input type="number" data-ukey="max_attempts" required>
+            </p>
+            <p>
+                Jam Mata Pelajaran ke:
+                <input type="number" data-ukey="mapel_num" required>
+            </p>
+            <p>
+                Hari Ujian ke:
+                <input type="number" data-ukey="ujian_day_num" required>
+            </p>
+            <p>
+                Waktu Mulai Ujian:
+                <input type="time" data-ukey="opened_time" required>
+            </p>
+            <p>
+                Waktu Akhir Ujian:
+                <input type="time" data-ukey="closed_time" required>
+            </p>
+            <p>
+                Waktu Submit Ujian:
+                <input type="time" data-ukey="submitted_time" required>
+            </p>
+            <div>
+                <button id="save-settings">Save Settings</button>
+            </div>
+        </form>
+        <div id="jadwal">
+            <img src="./assets/jadwal_ujian.jpeg" alt="Jadwal Ujian">
+        </div>
+    </div>
+</body>
+</html>
