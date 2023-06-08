@@ -20,12 +20,16 @@ body {
     color: gray;
 }
 
-form, #jadwal {
+#form-container, #jadwal {
     grid-row: 2;
 }
 
-form {
+#form-container {
     width: 100%;
+}
+
+#form-container > :not(:first-child) {
+    margin-top: 16px;
 }
 
 input[data-ukey="name"], input[data-ukey="email"] {
@@ -37,12 +41,21 @@ input[data-ukey="name"], input[data-ukey="email"] {
     grid-column: 2;
 }
 
-#submit-container {
+#save-user-btn-container {
     display: grid;
 }
 
-#save-user {
+#save-user-btn {
     justify-self: center;
     height: 50px;
     width: 100px;
+}
+
+#encode-url-container > :not(:first-child) {
+    margin-top: 10px;
+}
+
+#encode-url-output {
+    width: 12cm;
+    height: 1.2cm;
 }

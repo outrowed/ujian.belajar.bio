@@ -1,7 +1,7 @@
 
 import { loadUserData, saveUserData } from "../../scripts/user-data.js";
 
-const saveSettingsButton = document.querySelector("#save-user");
+const saveUserButton = document.querySelector("#save-user-btn");
 const inputs = document.querySelectorAll("input[data-ukey]");
 
 let userData = loadUserData() ?? {};
@@ -14,7 +14,7 @@ for (const input of inputs) {
     input.after(ukeyInfo);
 }
 
-saveSettingsButton.addEventListener("click", () => {
+saveUserButton.addEventListener("click", () => {
     if (!document.forms.settings.checkValidity()) return;
 
     for (const input of inputs) {
