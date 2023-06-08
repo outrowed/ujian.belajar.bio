@@ -8,6 +8,10 @@ let userData = loadUserData() ?? {};
 
 for (const input of inputs) {
     input.value = userData[input.dataset.ukey] ?? "";
+    const ukeyInfo = document.createElement("span");
+    ukeyInfo.className = "ukey-info";
+    ukeyInfo.textContent = `(${input.dataset.ukey})`;
+    input.after(ukeyInfo);
 }
 
 saveSettingsButton.addEventListener("click", () => {
