@@ -3,7 +3,7 @@ name: Github Pages Deploy
 on:
   push:
     branches:
-      - "master"
+      - "urlgen"
 
 jobs:
   publish:
@@ -20,7 +20,7 @@ jobs:
         uses: crazy-max/ghaction-github-pages@v3
         with:
             fqdn: ujian.smadewisartika.sch.id.belajar.bio
-            target_branch: gh-pages
+            target_branch: gh-pages-old
             build_dir: public
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
