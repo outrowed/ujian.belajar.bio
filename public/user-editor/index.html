@@ -20,19 +20,29 @@
             </p>
             <p>
                 Absen Siswa:
-                <input type="number" data-ukey="absen" placeholder="10" required>
+                <input type="number" data-ukey="absen" required>
+                <br>
+                Absen siswa harus sama dengan absen yang ada di website sebenarnya.
             </p>
             <p>
                 Kelas Siswa:
-                <input type="text" data-ukey="class" placeholder="X-4" pattern="X-[1-7]" required>
+                <input type="text" data-ukey="class" pattern="X-[1-7]" required>
+                <br>
+                Benar: X-4, X-5, X-6
+                <br>
+                Salah: X4, X--5, X_6
             </p>
             <p>
                 Email Siswa:
-                <input type="email" data-ukey="email" required placeholder="john-doe@gmail.com">
+                <input type="email" data-ukey="email">
+                <br>
+                Optional.
             </p>
             <p>
                 Tanggal Ujian:
                 <input type="datetime-local" data-ukey="date" required>
+                <br>
+                Input hari, bulan, tahun. Jam/menit tidak dibutuhkan.
             </p>
             <p>
                 Mata Pelajaran:
@@ -41,26 +51,42 @@
             <p>
                 Max Attempts:
                 <input type="number" data-ukey="max_attempts" required>
-            </p>
-            <p>
-                Jam Mata Pelajaran ke:
-                <input type="number" data-ukey="mapel_num" required>
+                <br>
+                Ujian UKK hanya ada 1 attempt.
             </p>
             <p>
                 Hari Ujian ke:
                 <input type="number" data-ukey="ujian_day_num" required>
+                <br>
+                Contoh: Senin adalah hari pertama, Selasa hari kedua, Rabu hari ketiga.
+            </p>
+            <p>
+                Jam Mata Pelajaran ke:
+                <input type="number" data-ukey="mapel_num" required>
+                <br>
+                Contoh: Hari ke-2 (Selasa) ada mata pelajaran Biologi dan Fisika. Bila yang dipilih adalah mata pelajaran Fisika, maka angka yang diinput adalah 2, karena Fisika adalah mata pelajaran ke-2 setelah Biologi. 
             </p>
             <p>
                 Waktu Mulai Ujian:
                 <input type="time" data-ukey="opened_time" required>
+                <br>
+                Mata pelajaran jam ke-1 biasanya dimulai jam 07:00.
+                <br>
+                Mata pelajaran jam ke-2 biasanya dimulai jam 09:00.
             </p>
             <p>
                 Waktu Akhir Ujian:
                 <input type="time" data-ukey="closed_time" required>
+                <br>
+                Mata pelajaran jam ke-1 biasanya berakhir jam 08:30.
+                <br>
+                Mata pelajaran jam ke-2 biasanya dimulai jam 10:30.
             </p>
             <p>
                 Waktu Submit Ujian:
                 <input type="time" data-ukey="submitted_time" required>
+                <br>
+                Waktu kamu submit ujian/UKK di website buatan. Harus sebelum waktu akhir ujian.
             </p>
             <div id="submit-container">
                 <button id="save-user">Save User</button>
