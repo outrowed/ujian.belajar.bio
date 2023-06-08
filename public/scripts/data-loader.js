@@ -27,7 +27,18 @@ for (const el of dataUKeyElements) {
         el.textContent = formatDateToString(convertTimeToDate(user_data[el.dataset.ukey]));
     }
     else if (el.dataset.ukey == "time_limit") {
-        const [hour, minute] = user_data.time_limit.split(":");
+        let hour, minute;
+
+        if (user_data.time_limit) {
+            ([hour, minute] = user_data.time_limit.split(":"));
+        }
+        else {
+            const [h1, m1] = user_data.opened_time.split(":").map(i => parseInt(i));
+            const [h2, m2] = user_data.closed_time.split(":").map(i => parseInt(i));
+
+            ([hour, minute] = [h2 - h1, m2 - m1]);
+        }
+
         el.textContent = `${parseInt(hour)} hour ${minute} minutes`;
     }
     else {
