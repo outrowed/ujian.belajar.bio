@@ -20,3 +20,9 @@ GM_addStyle(`
         pointer-events: auto !important;
     }
 `);
+
+const answer = document.querySelector("#answer");
+const credit = document.createElement("p");
+credit.innerHTML = `Unblocked by <a href="https://ujian.belajar.bio/userjs/roboguru-bypass.user.js">https://ujian.belajar.bio/userjs/roboguru-bypass.user.js</a>`
+
+answer.append(credit);
