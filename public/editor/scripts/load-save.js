@@ -23,8 +23,9 @@ export function setEntry(entry, value) {
 
 export function getEntry(entry) {
     const data = loadData();
+
     
-    if (data[entry]?.startsWith("dateiso:")) {
+    if (data[entry]?.startsWith?.("dateiso:")) {
         return getDateFromISO(data[entry]);
     }
 
