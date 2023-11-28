@@ -24,7 +24,7 @@ h1 {
 
 h2 {
     font-size: min(calc(1rem + 1.17vw), 1.7rem);
-    margin-bottom: 10px;
+    margin-bottom: 16px;
 }
 
 button {
@@ -82,9 +82,13 @@ main {
         border: 2px solid var(--bg-gray);
         padding: 12px 8px;
 
+        margin: 20px 0;
+
         & > :not(:first-child)::before {
+            display: inline-block;
             content: "/";
             padding-right: .5rem;
+            color: black;
         }
     }
 
