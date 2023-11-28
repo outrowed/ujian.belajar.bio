@@ -76,15 +76,14 @@ main {
     & .nav-path {
         display: flex;
         flex-wrap: wrap;
-        column-gap: .5rem;
-        row-gap: 12px;
+        gap: 10px;
 
         border: 2px solid var(--bg-gray);
-        padding: 12px 8px;
+        padding: 10px 10px;
 
         margin: 20px 0;
 
-        & > :not(:first-child)::before {
+        & :not(:first-child)::before {
             display: inline-block;
             content: "/";
             padding-right: .5rem;
