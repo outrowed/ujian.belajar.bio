@@ -13,12 +13,19 @@ export function loadData() {
 export function setEntry(entry, value) {
     const data = loadData();
     if (value instanceof Date) {
-        data[entry] = `dateiso:${value.toISOString()}`;
+        data[entry] = `dateiso:${toLocalTimeISOString(value)}`;
     }
     else {
         data[entry] = value;
     }
     saveData(data);
+}
+
+function toLocalTimeISOString(date) {
+    const clone = new Date(date);
+    const localtimeDate = new Date(clone.getTime() - clone.getTimezoneOffset()*60000);
+
+    return localtimeDate.toISOString();
 }
 
 export function getEntry(entry) {
