@@ -2,17 +2,6 @@
 import lodash from "https://esm.run/lodash@4";
 import { getDateFromDashedDate } from "../lib/date-format.js";
 
-/** @type {import("./ui-data.ts").UIData} */
-const defaultValues = {
-    course: {
-
-    },
-    date: {},
-    user: {},
-    attemptsAllowed: 1,
-    timeLimit: "10:10",
-};
-
 const searchParams = new URLSearchParams(window.location.search).entries();
 
 for (const [k, v] of searchParams) {
@@ -33,7 +22,7 @@ if (window.ui != undefined) {
     }
 
     if (ui.course && ui.course) {
-        ui.course.fullName = `${ui.course.prefix} ${ui.course.name} ${ui.course.postfix}`;
-        ui.user.fullnameWithClass = `${ui.user.class}-${ui.user.absen} ${ui.user.fullName}`;
+        ui.course.title = `${ui.course.prefix} ${ui.course.name} ${ui.course.postfix}`;
+        ui.user.title = `${ui.user.class}-${ui.user.absen} ${ui.user.name}`;
     }
 }

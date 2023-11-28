@@ -4,7 +4,7 @@ export interface UIData {
         prefix: string;
         postfix: string;
         name: string;
-        fullName: string;
+        title: string;
     };
     attemptsAllowed: number;
     timeLimit: Date;
@@ -16,7 +16,7 @@ export interface UIData {
     user: {
         absen: number;
         class: string;
-        fullName: string;
-        fullNameWithClass: string;
+        name: string;
+        title: string;
     }
 }
