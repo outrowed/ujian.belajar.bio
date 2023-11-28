@@ -1,5 +1,16 @@
 
 /** @param {string} str  */
+export function getDateFromISO(str) {
+    const [ namespace, ...isoDate ] = str.split(":");
+
+    if (namespace != "dateiso") {
+        return;
+    }
+
+    return new Date(isoDate.join(":"));
+}
+
+/** @param {string} str  */
 export function getDateFromDashedDate(str) {
     const [ namespace, dashedDate ] = str.split(":");
 
