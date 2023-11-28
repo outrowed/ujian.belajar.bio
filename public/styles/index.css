@@ -58,6 +58,10 @@ nav {
 main {
     padding: 8px 16px;
 
+    p {
+        text-align: center;
+    }
+
     & .nav-path {
         display: flex;
         flex-wrap: wrap;
