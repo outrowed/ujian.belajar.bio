@@ -1,14 +1,19 @@
 
 import lodash from "https://esm.run/lodash@4";
 import { getDateFromDashedDate, getDateFromISO } from "../lib/date-format.js";
+import { loadData } from "../lib/load-save.js";
+
+const userData = loadData();
 
 const searchParams = new URLSearchParams(window.location.search).entries();
 
-for (const [k, v] of searchParams) {
-    if (v.startsWith("date:")) {
+lodash.merge(userData, Object.fromEntries(searchParams));
+
+for (const [k, v] of Object.entries(userData)) {
+    if (v.startsWith?.("date:")) {
         lodash.set(window, k, getDateFromDashedDate(v));
     }
-    else if (v.startsWith("dateiso:")) {
+    else if (v.startsWith?.("dateiso:")) {
         lodash.set(window, k, getDateFromISO(v));
     }
     else {

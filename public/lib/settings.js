@@ -30,8 +30,9 @@ export function createOptionEntry(key, { type, name, placeholder, defaultValue }
         break;
         case "date":
             input.type = "datetime-local";
-            if (getEntry(key)) {
-                input.valueAsDate = new Date(getEntry(key));
+            const entryValue = getEntry(key);
+            if (entryValue) {
+                input.valueAsDate = entryValue;
             }
             input.addEventListener("change", () => {
                 setEntry(key, new Date(input.value));

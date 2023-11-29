@@ -1,4 +1,4 @@
-import { getDateFromISO } from "../../lib/date-format.js";
+import { getDateFromDashedDate, getDateFromISO } from "./date-format.js";
 
 export function saveData(dump) {
     const serialized = JSON.stringify(dump);
@@ -13,7 +13,7 @@ export function loadData() {
 export function setEntry(entry, value) {
     const data = loadData();
     if (value instanceof Date) {
-        data[entry] = `dateiso:${toLocalTimeISOString(value)}`;
+        data[entry] = `${toDashedDate(value)}`;
     }
     else {
         data[entry] = value;
@@ -21,19 +21,19 @@ export function setEntry(entry, value) {
     saveData(data);
 }
 
-function toLocalTimeISOString(date) {
-    const clone = new Date(date);
-    const localtimeDate = new Date(clone.getTime() - clone.getTimezoneOffset()*60000);
+/** @param {Date} date  */
+function toDashedDate(date) {
+    const dashedDate =
+        `date:${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}-${date.getHours()}-${date.getMinutes()}`;
 
-    return localtimeDate.toISOString();
+    return dashedDate;
 }
 
 export function getEntry(entry) {
     const data = loadData();
-
     
-    if (data[entry]?.startsWith?.("dateiso:")) {
-        return getDateFromISO(data[entry]);
+    if (data[entry]?.startsWith?.("date:")) {
+        return getDateFromDashedDate(data[entry]);
     }
 
     return data[entry];
